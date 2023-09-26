@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-image: url("your-background-image.jpg");
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+      }
+      #logo {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.5);
+        z-index: 3;
+      }
+      #playButton {
+        position: fixed;
+        bottom: 20px; /* Adjust the distance from the top */
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+        z-index: 4;
+        font-size: 32px; /* Increase the font size to make it larger */
+      }
+      #playButton::after {
+        content: "\25BC"; /* Unicode character for a downward arrow */
+        display: block;
+        background-color: red;
+      }
+    </style>
+    <title>Move Squares</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const logo = document.querySelector("#logo");
+        const animation = lottie.loadAnimation({
+          container: logo,
+          renderer: "svg",
+          loop: false,
+          autoplay: false,
+          path: "logo1.json",
+        });
+
+        function playAnimation() {
+          animation.play();
+          animation.addEventListener("complete", function () {
+            logo.style.display = "none";
+            redirectToNextPage();
+          });
+        }
+
+        function redirectToNextPage() {
+          window.location.href = "landing.html";
+        }
+
+        setTimeout(function () {
+          playAnimation();
+        }, 1500);
+
+        document.body.addEventListener("click", function () {
+          playAnimation();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.1/lottie.min.js"></script>
+
+    <div id="logo"></div>
+  </body>
+</html>
