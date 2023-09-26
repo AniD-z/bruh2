@@ -10,6 +10,9 @@
     <script src="https://unpkg.com/@reactivex/rxjs@5.5.11/dist/global/Rx.min.js"></script>
     <script src="https://unpkg.com/rxcss@0.6.0/dist/rxcss.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
   <style>
     html, body {
       height: 100%;
@@ -63,7 +66,7 @@
   overflow: hidden;
   border-right: 3px solid;
   font-family: 'Electrolize', sans-serif;
-  font-size: 6em;
+  font-size: 8em;
 }
 
 @keyframes typing {
@@ -108,6 +111,25 @@
             z-index: 10;
         }
 }
+    @media (max-width: 768px) {
+          .website {
+                font-size: 24px; /* Adjust font size for tablets */
+            }
+        }
+
+        /* Media query for screens between 768px and 1024px (e.g., tablets) */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .website {
+                font-size: 36px; /* Adjust font size for tablets */
+            }
+        }
+
+        /* Media query for screens larger than 1024px (e.g., desktops) */
+        @media (min-width: 1025px) {
+            .website {
+                font-size: 60px; /* Increase font size for larger screens */
+       }
+      }
 </style>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script>
