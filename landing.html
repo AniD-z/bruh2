@@ -27,6 +27,55 @@
       height: 100%;
       background: #111111;
     }
+    #arrow{
+            left: 50%;
+            transform: translateY(0%) rotate(45deg);
+            
+                          opacity: 0;
+          }
+          @keyframes scrolldown {
+                      0%{
+                          transform: translateY(10%) rotate(45deg);
+                          opacity: 0.7;
+                      }
+                      50%{
+                          transform: translateY(0%) rotate(45deg);
+                          opacity: 0.2;
+                      }
+                      100%{
+                          transform: translateY(3%) rotate(45deg);
+                          opacity: 0.7;
+                      }
+   }
+    .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.website {
+  top:12rem;
+  left:auto;
+  width: 20ch;
+  animation: typing 5s steps(30), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow-wrap: break-word;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: 'Electrolize', sans-serif;
+  font-size: 6em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent}
+}
     @media (min-width: 769px) and (max-width: 1024px){
   .logo {
             position: absolute;
@@ -1562,13 +1611,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
             <img src="Logo.png" alt="Logo" class="logo">
 
         </a>
+          <div class="wrapper">
+          <div class="website">DASTAAN : Will be live on Oct 3rd...</div>
+        </div>
           <div id="particles-js"></div>
-            
-            <h2 class="website">Dastaan is Coming: Tick-Tock, Get Excited! </h2>
-            
-
-            
-               
             <h1 id="top-h1" >
               <div id="pad">
               <div class="time" id="time1" data-days="" data-hours="" data-minutes="" data-seconds="">
@@ -1674,12 +1720,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
               </div>
                 <div id="bot"><button id="contributorsbutton" onclick="contributorspage()">contributors</button></div>
               </div>
-        <footer>
-          <a href="contributors.html" class="contributors-link">
-            <i class="icon"></i>
-            <span class="label">Contributors</span>
-          </a>
-        </footer>
+   
         <div id="bottom">
           <div id="particles1-js"></div>
 
@@ -1762,6 +1803,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
     </div>
     </div>
   </h1>
+          <div id="arrow" style="width: 2em; height: 2em; background-color: transparent; z-index: 80; 
+            bottom: 25px; position: absolute; border-width: 0 0.25em 0.25em 0; border-style: solid; border-color: antiquewhite; animation: scrolldown 1.2s ease-in-out infinite 0.15s;"></Div>
+    <div id="arrow" style="width: 2em; height: 2em; background-color: transparent; z-index: 80; 
+            bottom: 40px; position: absolute; border-width: 0 0.25em 0.25em 0; border-style: solid; border-color: antiquewhite; animation: scrolldown 1.2s ease-in-out infinite;"></Div>
+          </div>
     
         </div>
         
